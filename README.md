@@ -1,1 +1,5 @@
-Diploma_thesis_Opensource
+This repository is the part of the source code of my diploma thesis, which develope parallelization strategies for mapping convolutional neural networks (CNNs) onto the computing resources of the SpiNNaker2 system.
+
+The 2nd generation SpiNNaker (SpiNNaker2) system contains 144 machine learning (ML) accelerators and 144 ARM M4F cores for the efficient computation of deep neural networks (DNNs). The ML accelerator composes of a multiply-accumulate (MAC) array which can be used to calculate 2D convolutions or matrix multiplications.
+
+In the thesis, a SpiNNaker2 simulator written in Python, SpiNNaker2Py, and different parallelization strategies for mapping convolutional neural networks (CNNs) onto the ARM cores and ML accelerators were developed to estimate the overall processing clocks and memory utilization on inference phase as well as analysis the performance bottlenecks of SpiNNaker2. The mapping strategies involves how to chain several layers, how to decompose each layer into small parts and distribute them on SpiNNaker2 efficiently. Various state-of-the-art neural network model were applied for the work.
