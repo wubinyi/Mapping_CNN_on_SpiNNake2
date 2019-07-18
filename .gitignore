@@ -1,0 +1,12 @@
+
+CNN_distribution/\.idea/
+
+CNN_distribution/__pycache__/
+
+CNN_distribution/CNN_distribution\.sublime-workspace
+
+CNN_distribution/distributor/__pycache__/
+
+CNN_distribution/parserSplitter/__pycache__/
+
+CNN_distribution/spiNNaker2Simulator/__pycache__/

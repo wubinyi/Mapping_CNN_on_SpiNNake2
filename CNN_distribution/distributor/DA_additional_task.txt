@@ -1,0 +1,141 @@
+Convolution - operator fusion and data reuse
+Fully-connected - operator fusion
+
+Column=16, Row=4
+"VGG-CONV_1" : 	37982- 60s 	119254 - 121s
+	  	weight_clock: 497
+	 	inActi_clock: 8374
+	 	weight_migration: 0
+		computation: 29111 	110383 (including write outActi from SRAM to SRAM)
+
+"VGG-CONV_7" : 	214575- 366s
+	   	weight_clock: 9611
+	  	 inActi_clock: 23344
+		weight_migration: 2432*4=9728
+	   	computation: 171892 (including write outActi from SRAM to SRAM)
+
+"VGG-CONV_9": 	413733-708s
+	   	weight_clock: 19114
+	  	 inActi_clock: 49389
+		weight_migration: 4736*4=18944
+	   	computation: 326286 (including write outActi from SRAM to SRAM)
+
+"VGG-FC_21" :  	132044 - 129s
+
+"RES-CONV_1":	99623 - 159s
+				weight_clock: 971
+	 			inActi_clock: 11061
+	 			weight_migration: 0
+	   			computation: 87591 (including write outActi from SRAM to SRAM)
+
+"CONV_SC_14": 	115207 - 211s
+	   			weight_clock: 6926
+	  	 		inActi_clock: 18284
+				weight_migration: 634 (half) * 2 = 1268
+	   			computation: 89363 (including write outActi from SRAM to SRAM)
+
+"CONV_19": 	44987 - 71s
+	   		weight_clock: 7735
+	  	 	inActi_clock: 15453
+			weight_migration: 0
+	   		computation: 21799 (including write outActi from SRAM to SRAM)	
+
+"CONV_42": 	47116 - 69s
+	   		weight_clock: 25364
+	  	 	inActi_clock: 11049
+			weight_migration: 0
+	   		computation: 10703 (including write outActi from SRAM to SRAM) 
+
+Column=16, Row = 2
+"VGG-CONV_1" : 	49153- 80s 	124267 - 134s
+	   	weight_clock: 495
+	  	 inActi_clock: 8374
+		weight_migration: 0
+	   	computation: 40284  115398 (including write outActi from SRAM to SRAM)
+
+"VGG-CONV_7" : 	327914- 622s
+	   	weight_clock: 9611
+	  	 inActi_clock: 23342
+		weight_migration: 2432*4=9728
+	   	computation: 285233 (including write outActi from SRAM to SRAM)
+
+"VGG-CONV_9": 	639999-1144s
+	   	weight_clock: 19115
+	  	 inActi_clock: 49386
+		weight_migration: 4736*4=18944
+	   	computation: 552554 (including write outActi from SRAM to SRAM)
+
+"VGG-FC_21" :  	131864 - 135s	
+
+
+"RES-CONV_1":	168451 - 278s
+				weight_clock: 968
+	 			inActi_clock: 11061
+	 			weight_migration: 0
+	   			computation: 156422 (including write outActi from SRAM to SRAM)
+
+"CONV_SC_14": 	180906 - 328s
+	   			weight_clock: 6936
+	  	 		inActi_clock: 18290
+				weight_migration: 634 (half) * 2 = 1268
+	   			computation: 154412 (including write outActi from SRAM to SRAM)
+
+"CONV_19": 		59216 - 99s
+	   			weight_clock: 7736
+	  	 		inActi_clock: 15455
+				weight_migration: 0
+	   			computation: 36025 (including write outActi from SRAM to SRAM)	
+
+"CONV_42": 		55317 - 90s
+	   			weight_clock: 25365
+	  	 		inActi_clock: 11051
+				weight_migration: 0
+	   			computation: 18901 (including write outActi from SRAM to SRAM) 
+
+
+
+
+Column=8, Row=4
+"VGG-CONV_1" :	52504 - 86s 	125476 - 140s
+	  			weight_clock: 493 	495
+	 			inActi_clock: 8373
+	 			weight_migration: 0
+				computation: 43638 	116608 (including write outActi from SRAM to SRAM)
+
+"VGG-CONV_7" : 	376141 - 709s	370876 - 615s
+	   			weight_clock: 9611
+	  	 		inActi_clock: 23342
+				weight_migration: 2433*4=9732
+	   			computation: 333456 328191 (including write outActi from SRAM to SRAM)
+
+"VGG-CONV_9": 	736468 - 1323s 	729882 - 1191s
+	   			weight_clock: 19115
+	  	 		inActi_clock: 49388
+				weight_migration: 4736*4=18944
+	   			computation: 649021 642435 (including write outActi from SRAM to SRAM)
+
+"VGG-FC_21" :  	132816 - 134s
+
+"RES-CONV_1":	170628 - 307s 	168583 - 255s
+				weight_clock: 969
+	 			inActi_clock: 11060
+	 			weight_migration: 0
+	   			computation: 158599 156554 (including write outActi from SRAM to SRAM)
+
+"CONV_SC_14": 	176935 - 327s 	177153 - 333s
+	   			weight_clock: 6898
+	  	 		inActi_clock: 18295
+				weight_migration: 634 (half) * 2 = 1268
+	   			computation: 150474 150692 (including write outActi from SRAM to SRAM)
+
+"CONV_19": 	65233 - 105s 	64335 - 105s
+	   		weight_clock: 7739
+	  	 	inActi_clock: 15454
+			weight_migration: 0
+	   		computation: 41142 (including write outActi from SRAM to SRAM)	
+
+"CONV_42": 	57366 - 96s 	57354 - 91s
+	   		weight_clock: 25366
+	  	 	inActi_clock: 11050
+			weight_migration: 0
+	   		computation: 20950 20938(including write outActi from SRAM to SRAM) 

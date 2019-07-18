@@ -1,0 +1,28 @@
+{
+	"build_systems":
+	[
+		{
+			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+			"name": "Anaconda Python Builder",
+			"selector": "source.python",
+			"shell_cmd": "\"C:/Users/wubinyi/Anaconda3/python.exe\" -u \"$file\""
+		}
+	],
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	],
+    "settings": 
+    {
+        "extra_paths":
+        [
+            "D:/Projects_Workspace/Diploma_Arbeit/CNN_distribution",
+            "D:/Projects_Workspace/Diploma_Arbeit/CNN_distribution/distributor",
+            "D:/Projects_Workspace/Diploma_Arbeit/CNN_distribution/icproValidate",
+            "D:/Projects_Workspace/Diploma_Arbeit/CNN_distribution/parserSplitter",
+            "D:/Projects_Workspace/Diploma_Arbeit/CNN_distribution/spiNNaker2Simulator"
+        ]
+    }
+}

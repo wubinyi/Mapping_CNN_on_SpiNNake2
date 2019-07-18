@@ -1,0 +1,104 @@
+VGG-19 QPE-DRAM Convolutional Layer:
+1. No operator fusion + No data reuse
+"CONV_1": 2295495 - 119s  2294223 - 114s
+"CONV_4": 5828888 - 496s
+"CONV_5": 16207531 - 1168s
+"CONV_7": 6247798 - 608s
+"CONV_9": 12616201 - 1107s
+"CONV_11": 6369574 - 551s
+"CONV_15": 3261186 - 284s
+
+2. Operator fusion + No data reuse
+"CONV_1": 738713 - 64s	835667 - 70s
+"CONV_4": 5572513 - 488s
+"CONV_5": 11050716 - 963s
+"CONV_7": 6128823 - 622s
+"CONV_9": 12417980 - 1129s
+"CONV_11": 6262524 - 540s
+"CONV_15": 3254902 - 282s
+
+3. Operator fusion + data reuse
+"CONV_1": 754584 - 60s 	1065837 - 77s
+"CONV_4": 4990816 - 488s
+"CONV_5": 9697264 - 838s
+"CONV_7": 5449664 - 487s
+"CONV_9": 10838832 - 994s
+"CONV_11": 5419584 - 513s
+"CONV_15": 2918496 - 246s
+
+
+
+VGG-19 QPE-DRAM Fully-connected Layer:
+1. No operator fusion + No data reuse
+"FC_21" :  546718 - 25s
+
+2. Operator fusion + No data reuse
+"FC_21" :  532670 - 25s
+
+
+
+
+
+ResNet-50 QPE-DRAM Convolutional Layer:
+							CONV_19: 	(636.9308885754584, 231211008)
+							CONV_7: 	(510.5528547201809, 231211008)			-----		MLA
+							CONV_25: 	(327.7097242380261, 231211008)			-----		InActi, MLA
+							CONV_1: 	(243.44142573799928, 236027904)						stride = 2
+							CONV_26: 	(200.30339321357286, 102760448)			-----		InActi, MLA
+							CONV_SC_14: (153.91411042944785, 205520896)			-----		xxxx, stride = 2
+							CONV_5: 	(100.75502008032129, 102760448)
+							CONV_43: 	(95.31110173068805, 231211008)			-----		InActi, MLA 			
+							CONV_42: 	(68.49965870307167, 51380224)
+							FC_52: 		(1.9970745977571915, 4194304)
+
+							-> CONV_SC_26: 	(182.45818181818183, 205520896)
+							-> CONV_SC_44: 	(85.69769427839454, 205520896)
+
+							---> CONV_15: 	(181.1407942238267, 102760448)
+							---> CONV_24: 	(88.18277680140598, 51380224)
+							---> CONV_50: 	(87.5290013083297, 102760448)
+							---> CONV_3: 	(63.35353535353536, 25690112)
+							---> CONV_12: 	(54.89715536105033, 51380224)
+
+1. No operator fusion + No data reuse
+"CONV_1" : 	2402170 - 204s
+"CONV_5":	2246963 - 103s
+"CONV_7":	813317 - 69s
+"CONV_SC_14":	15341673 - 730s
+"CONV_19": 	806278 - 69s
+"CONV_25": 	761451 - 65s
+"CONV_26":	422420 - 38s
+"CONV_42":	4145252 - 193s
+"CONV_43": 	1644412 - 140s
+
+2. Operator fusion + No data reuse
+"CONV_1": 	2304196 - 194s
+"CONV_5":	1717913 - 86s
+"CONV_7":	785374 - 67s
+"CONV_SC_14":	13356221 - 676s
+"CONV_19": 	788695 - 67s
+"CONV_25": 	753440 - 64s
+"CONV_26":	383365 - 36s
+"CONV_42":	3675771 - 175s
+"CONV_43": 	1527487 - 134s
+
+3. Operator fusion + Data reuse
+"CONV_1":  	2320116 - 189s
+"CONV_5":	471968 - 39s
+"CONV_7":	716836 - 63s
+"CONV_SC_14":	2722496 - 283s
+"CONV_19": 	700808 - 62s
+"CONV_25": 	739465 - 64s
+"CONV_26":	369810 - 34s
+"CONV_42":	879624 - 82s
+"CONV_43": 	1598560 - 133s
+
+
+
+ResNet-50 QPE-DRAM Fully-connected Layer:
+
+1. No operator fusion + No data reuse
+"FC_52" :  276382 - 14s
+
+2. Operator fusion + No data reuse
+"FC_52" :  269502 - 13s
